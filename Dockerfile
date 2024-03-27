@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node:14-alpine
+FROM node:16-alpine
 
 # Set the working directory in the container
 WORKDIR /reactjs-app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose port 3000 to the outside world
-EXPOSE 3000
+EXPOSE 3001
 
 # Command to run the application
 CMD ["npm", "start"]
